@@ -1,0 +1,336 @@
+/* Keep the footer stay at the bottom*/
+body, html{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f2f2f2; /* Light background */
+    color: #333;
+}
+
+main{
+    flex-grow:1;
+}
+
+/*-----------------------------------------------*/
+.introduction {
+    position: relative;
+    overflow: hidden;
+}
+
+#bg-live-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.introduction .nav-item{
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.introduction .nav-item:hover{
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.introduction .nav-item.active {
+    background-color: rgba(128, 128, 128, 0.4); /* Adjust this to the desired active color */
+    color: white; /* Adjust the text color if needed */
+}
+
+/*--Introduction--*/
+.introduction{
+    height: 100vh; /* 100VH would represent 100% of the viewport's height, or full height of the screen */
+    width: 100%;
+    background-size: cover; /* Scale the background image to cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.introduction .container-intro{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.introduction .intro{
+    color: white;
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox to center text vertically */
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text vertically */
+}
+
+.introduction .container-next a{
+    font-size: 35px;
+}
+
+@keyframes bounceDown{
+    0%, 100%{
+        transform: translateY(0);;  
+    }
+
+    50%{
+        transform: translateY(10px) ;
+    }
+}
+
+.introduction .container-next .arrow-icon:hover{
+    animation: bounceDown 1s infinite;
+}
+
+/* .introduction .container-next .arrow-icon:hover{
+    transform: translateY(10px);
+} */
+
+.introduction .container-next{
+    position: absolute;
+    bottom: 0;
+    right: 50%; 
+    transform: translateX(50px);
+    margin-bottom: 20px;
+}
+
+/*--About--*/
+.about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:aliceblue;
+}
+
+.about h1, .experience h1, .project h1, .contact h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 30px;
+}
+
+.about h2 {
+    font-size: 75px;
+}
+
+.about span{
+    color:coral;
+}
+
+.about .about-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.about .about-info img{
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.about .about-info img:hover{
+    cursor:default;
+    filter: grayscale(100%);
+}
+
+.about .about-info p {
+    padding: 20px;
+    max-width: 80%;
+    font-family: 'Roboto Slab', serif;
+    width: 60%;
+}
+
+/*--Experience--*/
+.experience{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: block;
+    background-color: #9a9190;
+    color: white;
+}
+
+.experience h2{
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.7;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.experience h3{
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.7;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .experience-logo-container{
+    background-color:;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);    
+} */
+
+.experience-logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.experience .row {
+    text-align: center;
+}
+
+.experience .experience-logo {
+    margin-left: auto; /* Push the logo to the right by auto margin */
+    margin-right: auto; /* Push the logo to the left by auto margin */
+}
+
+.experience .work-logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.experience .work-logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--Resume--*/
+.resume{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("../WillNguyen/images/resumebg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.resume a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 30px;
+    font-size: 40px;
+    color:white;
+}
+
+.resume a:hover{
+    color:burlywood;
+}
+
+/*--Project--*/
+.project{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #9a9190;
+    color: white;
+}
+
+/*--Contact--*/
+.contact{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    background-color:aliceblue;
+}
+
+.contact-box{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    box-shadow: 5px 5px 8px #888888;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/*--Rocket-Icon--*/
+@keyframes bounceUp{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+.rocket-icon{
+    animation: bounceUp 1s infinite;
+}
+
+.rocket-icon i{
+    color: black;
+    font-size: 35px;
+}
+
+/*--Button Design--*/
+/* *, *::before, *::after {
+    box-sizing: border-box;
+} */
+
+.resume button {
+    margin: 1rem;
+}
+
+.btn1 {
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+  
+    --background-color: #E3E3E3;
+    --border-size: 2px;
+    --accent-color: #0AF;
+}
+
+.btn1.btn-background-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+  
+.btn1.btn-background-slide:hover::before,
+.btn1.btn-background-slide:focus::before {
+transform: scaleX(1);
+}
+
+.btn1.btn-background-slide {
+transition: color 300ms ease-in-out;
+z-index: 1;
+}
+
+
+.btn1.btn-background-slide:hover,
+.btn1.btn-background-slide:focus {
+color: white;
+}
+
+.container .test-fb:hover + #contact{
+    background-color: red;
+}
