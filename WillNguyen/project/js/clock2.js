@@ -18,11 +18,12 @@ function draw() {
     const hours = time.getHours();
     const minutes = time.getMinutes();
     const meridiem = hours >= 12 ? "PM" : "AM";
-    let centerX = canvas.width/2;
-    let centerY = canvas.height/2;
+    // Use the client dimensions for correct proportions
+    let centerX = canvas.clientWidth / 2;
+    let centerY = canvas.clientHeight / 2;
 
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
+    let screenWidth = canvas.clientWidth;
+    let screenHeight = canvas.clientHeight;
 
     // Coordination of line 1
     const xPos1 = screenWidth * 0.1;
@@ -95,14 +96,14 @@ function draw() {
     const hoursY = centerY-50;
 
     // Draw hours and minutes
-    ctx.fillText(hoursText, canvas.width/2 - hoursTextWidth/2, hoursY);
+    ctx.fillText(hoursText, canvas.clientWidth/2 - hoursTextWidth/2, hoursY);
 
     requestAnimationFrame(draw);
 }
 
 function draw_background(meridiem){
     ctx.fillStyle = "#000000";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 }
 
 function padZero(number){
