@@ -1,3 +1,5 @@
+var intervalID;
+
 function formatTime(){
     const time = new Date();
     let hours = time.getHours();
@@ -26,6 +28,25 @@ function displayMeridiem(meridiem){
 
 }
 
-formatTime();
+function setReminder(){
+    const min = document.getElementById("ftime").value;
+    console.log(min);
+    intervalID = setInterval(()=>{
+        const time = new Date();
+        const minutes = time.getMinutes();
+        const hours = time.getHours();
+        if(minutes == min){
+            document.getElementById("reminder-msg").innerHTML = "Wake up";
+            const reminderSound = new Audio('./sound/ominant.mp3');
+            reminderSound.play();
+        }
+    }, 3000);
+    console.log(intervalID);
+}
 
+function stopReminder(){
+    clearInterval(intervalID);
+    document.getElementById("reminder-msg").innerHTML = "Stop Reminder"
+}
+formatTime();
 setInterval(formatTime,1000);

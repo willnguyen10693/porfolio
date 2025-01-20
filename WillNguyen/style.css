@@ -26,7 +26,23 @@ main{
     object-fit:cover;  
 } */
 
-.introduction .nav-item{
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item{
     justify-content: center;
     box-sizing: border-box;
     border-radius: 8px;
@@ -34,7 +50,7 @@ main{
     margin-right: 3px;
 }
 
-.introduction .nav-item:hover{
+.nav-item:hover{
     background-color: rgba(128, 128, 128, 0.4);
 }
 

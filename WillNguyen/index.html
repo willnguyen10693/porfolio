@@ -29,6 +29,35 @@
         <title>Will Nguyen's Portfolio</title>
     </head>
     <body>
+        <header id="header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/"><img src="./images/logo/WN_1.png" style="width: 80px; height: 60px;" alt="This image is not available"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav p-1">
+                      <li class="nav-item pe-1">
+                        <a class="nav-link" href="#about">About</a>
+                      </li>
+                      <li class="nav-item pe-1">
+                        <a class="nav-link" href="#project">Project</a>
+                      </li>
+                      <li class="nav-item pe-1">
+                        <a class="nav-link" href="#experience">Experience</a>
+                      </li>
+                      <li class="nav-item pe-1">
+                        <a class="nav-link" href="#contact">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+          <script>
+            gsap.from('.anim3',{opacity:0, duration:1,delay: 0, y: -50, ease: "power1.out"});
+          </script>
+        </header>
         <script>
             particlesJS.load('particles-js', 'particles.json', function() {
             console.log('Particles.js loaded!');
@@ -41,35 +70,6 @@
                     <source src="./images/background/live-background-1.mp4" type="video/mp4">
                 </video> -->
                 <div id="particles-js"></div>
-                <header id="header">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                          <a class="navbar-brand text-light" href="/"><img src="./images/logo/WN_3.png" style="width: 80px; height: 60px;" alt="This image is not available"></a>
-                          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul class="navbar-nav p-1">
-                              <li class="nav-item pe-1">
-                                <a class="nav-link text-light" href="#about">About</a>
-                              </li>
-                              <li class="nav-item pe-1">
-                                <a class="nav-link text-light" href="#project">Project</a>
-                              </li>
-                              <li class="nav-item pe-1">
-                                <a class="nav-link text-light" href="#experience">Experience</a>
-                              </li>
-                              <li class="nav-item pe-1">
-                                <a class="nav-link text-light" href="#contact">Contact</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </nav>
-                  <script>
-                    gsap.from('.anim3',{opacity:0, duration:1,delay: 0, y: -50, ease: "power1.out"});
-                  </script>
-                </header>
                 <div class="container-intro">
                     <div class="intro">
                         <h1 class="anim4">Hi, I'M WILL NGUYEN</h1>

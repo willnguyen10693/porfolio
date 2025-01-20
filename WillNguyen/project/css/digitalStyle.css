@@ -1,24 +1,33 @@
 /******Digital Clock******/
 body{
-    background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
-    width: auto;
+    /* background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%); */
+    background: black;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
 .clock-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 10px 5px 5px purple;
+    height: 90%;
+    margin: auto;
+    padding: 10px;
 }
 
 .clock{
-    color:hsla(186, 33%, 94%, 1);
-    font-size: 10vw;
+    color:whitesmoke;
+    font-size: 5vw;
     font-weight: bold;
     font-family: monospace;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    box-sizing: border-box;
+    border-top: 1px orchid solid;
+    border-bottom: 1px orchid solid;
+    border-radius: 10px;
 }
 
 .meridiem-container{
@@ -26,7 +35,7 @@ body{
     font-weight: bold;
     font-family: monospace;
     font-size: 2vw;
-    color: hsla(186, 33%, 94%, 1);
+    color: orchid;
 }
 
 @media (max-width: 768px) {
@@ -41,3 +50,13 @@ body{
     }
 }
 
+.reminder-icon{
+    font-size: larger;
+    color: white;
+}
+
+.reminder-icon:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+}
