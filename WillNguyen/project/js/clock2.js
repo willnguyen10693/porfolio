@@ -2,7 +2,6 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 let radians = 0;
-let velocity  = 0.0008;
 // Resize canvas
 function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
@@ -10,8 +9,6 @@ function resizeCanvas() {
     canvas.height = canvas.clientHeight * dpr;
 
     // Set the canvas width and height according to the display resolution
-    canvas.width = width;
-    canvas.height = height;
     ctx.scale(dpr, dpr); // Scale the drawing context
 }
 
@@ -23,6 +20,17 @@ function draw() {
     const meridiem = hours >= 12 ? "PM" : "AM";
     let centerX = canvas.width/2;
     let centerY = canvas.height/2;
+
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Coordination of line 1
+    const xPos1 = screenWidth * 0.1;
+    const yPos1 = screenHeight * 0.4;
+
+    // Coordination of line 2
+    const xPos2 = screenWidth * 0.9;
+    const yPos2 = screenHeight * 0.4;
 
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height); 
@@ -45,36 +53,36 @@ function draw() {
     centerX = centerX + Math.cos(radians)*400;
     secondsY = secondsY + Math.sin(radians)*300;
     
-    ctx.beginPath();
-    ctx.moveTo(100, 100);
-    ctx.lineTo(centerX-30, secondsY-30);
-    ctx.lineWidth = 5;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "#FF6347";
-    ctx.stroke();
+    // Draw seconds
+    ctx.fillText(secondsText, centerX - secondsTextWidth/2, secondsY);
+
 
     ctx.beginPath();
-    ctx.moveTo(100, 1400);
-    ctx.lineTo(centerX-30, secondsY-30);
-    ctx.lineWidth = 5;
+    ctx.moveTo(xPos1, yPos1);
+    ctx.lineTo(centerX-30, secondsY);
+    ctx.lineWidth = 3;
     ctx.lineCap = "round";
-    ctx.strokeStyle = "#FF6347";
+    ctx.strokeStyle = "#D8B7DD";
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(xPos2, yPos2);
+    ctx.lineTo(centerX+30, secondsY);
+    ctx.lineWidth = 3;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#D8B7DD";
     ctx.stroke();
 
     // Create a path to fill the space between the two lines
     ctx.beginPath();
-    ctx.moveTo(100, 100); // Starting point of the first line
-    ctx.lineTo(centerX - 30, secondsY - 30); // End of the first line
-    ctx.lineTo(centerX - 30, secondsY - 30); // Same point as second line
-    ctx.lineTo(100, 1400); // Starting point of the second line
+    ctx.moveTo(xPos1, yPos1); // Starting point of the first line
+    ctx.lineTo(centerX - 30, secondsY); // End of the first line
+    ctx.lineTo(centerX + 30, secondsY); // Same point as second line
+    ctx.lineTo(xPos2, yPos2); // Starting point of the second line
+    // ctx.fillStyle = "#D8B7DD";
+    // ctx.fill();
     ctx.closePath(); // Close the shape
-
-    // Fill the area between the lines with a different color
-    ctx.fillStyle = "#FF6347"; // Lime green (change as needed)
-    ctx.fill();
-
-    // Draw seconds
-    ctx.fillText(secondsText, centerX - secondsTextWidth/2, secondsY);
 
     // Set font for hours and minutes
     ctx.font = "bold 150px monospace";
@@ -82,7 +90,6 @@ function draw() {
     const hoursText = `${padZero(hours)}:${padZero(minutes)}`;
     const hoursTextMetrics = ctx.measureText(hoursText);
     const hoursTextWidth = hoursTextMetrics.width;
-    console.log(hoursTextWidth);
 
     // Calculate position
     const hoursY = centerY-50;
@@ -101,7 +108,6 @@ function draw_background(meridiem){
 function padZero(number){
     return (number < 10 ? "0" : "") + number; 
 }
-
-draw();
 resizeCanvas();
+draw();
 window.addEventListener("resize", resizeCanvas);
