@@ -32,7 +32,7 @@
         <header id="header">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/"><img src="./images/logo/WN_1.png" style="width: 80px; height: 60px;" alt="This image is not available"></a>
+                  <a class="navbar-brand" href="#introduction"><img src="./images/logo/WN_1.png" style="width: 60px; height: 40px;" alt="This image is not available"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -66,14 +66,38 @@
         <main>
             <!--Introduction-->
             <section class="introduction" id="introduction">
+                <div id="particles-js"></div>
                 <!-- <video autoplay muted loop id="bg-live-background">
                     <source src="./images/background/live-background-1.mp4" type="video/mp4">
                 </video> -->
-                <div id="particles-js"></div>
                 <div class="container-intro">
                     <div class="intro">
-                        <h1 class="anim4">Hi, I'M WILL NGUYEN</h1>
-                        <h2 class="anim4">Web Developer</h2>
+                        <div class="sub-intro">
+                            <div class="word">
+                                <h1 class="anim4">Hi, I am </h1>
+                                <h2 class="anim4">WILL NGUYEN</h2>
+                                <h3 class="anim4">Web Developer</h3>
+                                <div class="anim4">
+                                    <a class="btn btn-link btn-floating btn-lg text-body-emphasis"
+                                        href="https://www.facebook.com/profile.php?id=100003282247206"
+                                        role="button" style="font-size: 40px;">
+                                    <i class="bi bi-facebook"></i></a>
+                
+                                    <a class="btn btn-link btn-floating btn-lg text-body-emphasis"
+                                        href="https://www.linkedin.com/in/will-nguyen-02a5ab223/"
+                                        role="button" style="font-size: 40px;">
+                                    <i class="bi bi-linkedin"></i></a>
+                
+                                    <a class="btn btn-link btn-floating btn-lg text-body-emphasis"
+                                        href="https://github.com/willnguyen10693"
+                                        role="button" style="font-size: 40px;">
+                                    <i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                            <div class="sub-intro-img anim4">
+                                <img src="./images/will-ai-nobg.png" alt="This image is not available">
+                            </div>
+                        </div>
                         <div class="container-next">
                             <a class="btn btn-link btn-floating btn-lg text-light m-1 anim4 arrow-icon"
                                 href="#about"
@@ -82,18 +106,20 @@
                             </a>
                         </div>
                     </div>
+                    
                 </div>
             </section>
             <!--About me-->
-            <section class="about" id="about" style="background-color: #f2f2f2; color: #333;" data-aos="fade-up">
-                <div class="row container about-info">
-                    <div class="col">
-                        <h1>A LITTLE BIT ABOUT ME</h1>
-                        <img class="p-2" src="./images/willnguyen.jpeg" alt="This image is not available">
-                        <h3 class="p-3">Success comes from <span class="auto-type"></span></h3>
-                    </div>
-                    <div class="col">
+            <section class="about" id="about" style="background-color: #f1edda; color: #333;" data-aos="fade-up">
+                <div class="container about-info">
+                    <h1>ABOUT ME</h1>
+                    <div>
                         <p>I am a passionate web developer with extensive experience in both front-end and back-end technologies. My expertise lies in crafting user-friendly and visually appealing websites that not only look stunning but also provide an exceptional user experience. Let's collaborate and create something amazing together!</p>
+                    </div>
+                    <div class="quote">
+                        <div class="quote-box">
+                            <h3 class="p-3">Success comes from <br> <span class="auto-type"></span></h3>
+                        </div>
                     </div>
                 </div>
                 <script>
@@ -106,45 +132,43 @@
                 </script>
             </section>
            <!--Experience-->
-           <section class="experience" id="experience" style="background-color: #e0e0e0; color: #333;" data-aos="fade-up">
+           <section class="experience" id="experience" style="background-color: #b9b4a5; color: #333;" data-aos="fade-up">
             <div class="container">
                 <h1>EXPERIENCE</h1>
                 <h2>I've been doing web development for about 1 years now, and I'm always eager to learn more in this fast paced industry.</h2>
                 <h3>SOME TECHNOLOGIES I'VE WORKED WITH:</h3>
                 <div class="container tech-box">
                     <div class="row p-2">
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/html.png" alt="">
                         </div>
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/css.png" alt="">
                         </div>
                     </div>
                     <div class="row p-2">
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/javascript.png" alt="">
                         </div>
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/bootstrap.png" alt="">
                         </div>
                     </div>
                     <div class="row p-2">
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/github.png" alt="">
                         </div>
-                        <div class="col me-4 experience-logo">
+                        <div class="col-2 experience-logo">
                             <img src="./images/logo/tech/gitlab.svg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <h3>WHERE I'VE WORKED WITH:</h3>
-                <div class="row p-2">
-                    <div class="col me-4 work-logo">
-                        <img src="./images/logo/c-trax/c-trax.png" alt="">
-                    </div>
-                </div>  
+            <h3>WHERE I'VE WORKED WITH:</h3>
+            <div class="container company-box">
+                <div class="work-logo">
+                    <img src="./images/logo/c-trax/c-trax.png" alt="">
+                </div>
             </div>
            
            </section>
@@ -162,16 +186,16 @@
                     <h1>Project</h1>
                     <div class="project-items">
                         <div class="digital">
-                            <a href="./project/digitalClock.html">Digital</a>
+                            <a href="./project/digitalClock.html"><img src="./images/clock1.png"></a>
                         </div>
-                        <!-- <div class="circular">
-                            <a href="./project/digitalClock.html">circular</a>
-                        </div> -->
+                        <div class="digital">
+                            <a href="./project/circularClock.html"><img src="./images/clock2.png"></a>
+                        </div>
                     </div>
                 </div>
            </section>
            <!--Contact-->
-           <section class="contact" id="contact" style="background-color: #ecf0f1; color: #333;" data-aos="fade-up">
+           <section class="contact" id="contact" style="background-color:#f1edda; color: #333;" data-aos="fade-up">
             <h1>Contact</h1>
             <div class="container p-4 bg-light contact-box">
                 <div class="row">
@@ -211,11 +235,11 @@
                 </div>
             </div>    
            </section>
-           <div class="text-end" style="background-color: #ecf0f1; color: #333;">
+           <div class="text-end" style="background-color: #2c3025;; color: #333;">
                 <a class="btn btn-link btn-floating btn-lg m-1 rocket-icon"
                     href="#introduction"
                     role="button">
-                <i class="bi bi-rocket"></i></a>
+                <i class="bi bi-rocket" style="color:tan;"></i></a>
             </div>
            <script>
                 gsap.from('.anim4',{opacity: 0, duration:1,delay: 0.5, y: -50, ease: "power1.out", stagger: 0.5});  
@@ -224,39 +248,12 @@
         </main>
 
 
-                <!--Footer-->
-        <footer class="text-center text-white" id="footer">
-            <!-- Grid container -->
-            <div class="container">
-                <!-- Section: Social media-->
-                <section>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 test-fb"
-                        href="https://www.facebook.com/profile.php?id=100003282247206"
-                        role="button"
-                        data-mdb-ripple-color="dark">
-                    <i class="bi bi-facebook"></i></a>
-
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                        href="https://www.linkedin.com/in/will-nguyen-02a5ab223/"
-                        role="button"
-                        data-mdb-ripple-color="dark">
-                    <i class="bi bi-linkedin"></i></a>
-
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                        href="https://github.com/WillNguyen106"
-                        role="button"
-                        data-mdb-ripple-color="dark">
-                    <i class="bi bi-github"></i></a>
-                </section>
-            </div>
-            <!-- Grid container -->
-            
+        <!--Footer-->
+        <footer class="text-center text-white" id="footer" style="background-color: beige;">
             <!-- Copyright -->
             <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2023 Will Nguyen
             </div>
-
-
         </footer>
 
 

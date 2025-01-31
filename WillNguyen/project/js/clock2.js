@@ -87,7 +87,7 @@ function draw() {
 
     // Set font for hours and minutes
     ctx.font = "bold 150px monospace";
-    ctx.fillStyle = "#808080";
+    ctx.fillStyle = "#FFB81C";
     const hoursText = `${padZero(hours)}:${padZero(minutes)}`;
     const hoursTextMetrics = ctx.measureText(hoursText);
     const hoursTextWidth = hoursTextMetrics.width;

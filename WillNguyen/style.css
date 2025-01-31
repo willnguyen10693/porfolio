@@ -38,7 +38,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: whitesmoke;
+    background-color:beige; 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -55,8 +55,7 @@ nav{
 }
 
 .introduction .nav-item.active {
-    background-color: rgba(128, 128, 128, 0.4); /* Adjust this to the desired active color */
-    color: white; /* Adjust the text color if needed */
+    background-color: rgba(128, 128, 128, 0.4);
 }
 
 /*--Introduction--*/
@@ -66,24 +65,52 @@ nav{
     background-size: cover; /* Scale the background image to cover the entire section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    background-color: #97977e;
 }
 
 .introduction .container-intro{
     height: 100vh;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
 }
 .introduction .intro{
     color: white;
-    text-align: center; /* Center text horizontally */
-    display: flex; /* Use flexbox to center text vertically */
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text vertically */
-    padding-bottom: 200px;
+    margin: 20px;
+}
+
+.introduction .sub-intro{
+    display: flex;
+    align-items: center;
+}
+
+.introduction .sub-intro .word{
+    margin: 15px;
+    padding-left: 10px;
+}
+
+.introduction .sub-intro h1{
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.introduction .sub-intro h2{
+    font-size: 3rem;
+    padding-top: 2.5rem;
+    color:tan;
+    line-height: 1.2;
+}
+
+.introduction .sub-intro h3{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 5px;
+}
+
+.introduction .intro .sub-intro-img img{
+    width:100%;
+    height:100%;
 }
 
 .introduction .container-next a{
@@ -137,33 +164,33 @@ nav{
 }
 
 .about span{
-    color:coral;
+    color:indianred;
 }
 
 .about .about-info{
     align-items: center;
-    padding: 20px;
-    justify-content: center;
-}
-
-.about .about-info img{
-    width: 30%;
-    height: 30%;
-    border-radius: 10%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-}
-
-.about .about-info img:hover{
-    cursor:default;
-    filter: grayscale(100%);
+    margin: auto;
 }
 
 .about .about-info p {
-    padding: 20px;
-    max-width: 80%;
+    width: 80%;
+    margin: auto;
     font-family: 'Roboto Slab', serif;
-    width: 60%;
+}
+
+.about .about-info .quote{
+    text-align: -webkit-center;
+    padding: 20px;
+    
+}
+
+.about .quote-box{
+    box-sizing: border-box;
+    width: 350px;
+    height: 100px;
+    box-shadow: 10px 5px 5px gray;
+    text-align: center;
+    background-color: darkseagreen;
 }
 
 /*--Experience--*/
@@ -213,7 +240,11 @@ nav{
 }
 
 .experience .tech-box{
+    width: 40%;
+}
 
+.experience .company-box{
+    text-align: center;
 }
 
 .experience .experience-logo {
@@ -222,8 +253,8 @@ nav{
 }
 
 .experience .work-logo img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
 }
 
@@ -236,10 +267,7 @@ nav{
 .resume{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url("../WillNguyen/images/resumebg1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-color: #1e1e1e;
+    background-color: #2c3025;
     color: white;
 }
 
@@ -262,7 +290,7 @@ nav{
 .project{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #9a9190;
+    background-color:#b9b4a5;
     color: white;
 }
 
@@ -270,25 +298,40 @@ nav{
     width: 100%;
     height: 400px;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project .project-items .digital{
-    width: 15%;
-    height: 100px;
-    border-radius: 15px;
+    width: 400px;
+    height: 40%;
+    border-radius: 5px;
     align-content: center;
     text-align: center;
     margin: 10px;
     cursor: pointer;
     box-sizing: border-box;
-    box-shadow: 5px 5px;
+    background-color: linen;
+}
+
+.project .project-items .digital a{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.project .project-items .digital img{
+    width: 90%;
+    height: 55%;
+}
+
+.project .project-items .digital:hover{
+    opacity: 0.5;
+    transition: 1s;
 }
 
 /*--Contact--*/
 .contact{
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 10px;
     background-color:aliceblue;
 }
@@ -373,8 +416,4 @@ z-index: 1;
 .btn1.btn-background-slide:hover,
 .btn1.btn-background-slide:focus {
 color: white;
-}
-
-.container .test-fb:hover + #contact{
-    background-color: red;
 }
