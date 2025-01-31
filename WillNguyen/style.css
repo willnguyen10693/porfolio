@@ -248,7 +248,13 @@ nav{
 }
 
 .experience .tech-box{
-    width: 40%;
+    width: 500px;
+}
+
+@media (max-width:768px) {
+    .experience .tech-box{
+        width: 90%;
+    }
 }
 
 .experience .company-box{
