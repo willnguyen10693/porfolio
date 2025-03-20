@@ -12,21 +12,27 @@ body{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: 10px 5px 5px purple;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     margin: auto;
     padding: 10px;
+    animation: test 2s infinite alternate linear;
+}
+
+@keyframes test {
+    from {border: 10px purple dotted;}
+    to {border: 10px red dotted;}
 }
 
 .clock{
     color:whitesmoke;
-    font-size: 5vw;
+    font-size: 8vw;
     font-weight: bold;
     font-family: monospace;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
     box-sizing: border-box;
-    border-top: 1px orchid solid;
-    border-bottom: 1px orchid solid;
+    border-top: 1px orchid dotted;
+    border-bottom: 1px orchid dotted;
     border-radius: 10px;
 }
 

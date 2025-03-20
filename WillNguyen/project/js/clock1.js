@@ -48,5 +48,6 @@ function stopReminder(){
     clearInterval(intervalID);
     document.getElementById("reminder-msg").innerHTML = "Stop Reminder"
 }
+
 formatTime();
 setInterval(formatTime,1000);
