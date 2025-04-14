@@ -44,7 +44,7 @@ main{
 }
 
 @keyframes firstDisplay {
-    from {color: black;}
+    from {color:steelblue}
     to {color: rgba(0, 0, 0, 0.1);}
 }
 
