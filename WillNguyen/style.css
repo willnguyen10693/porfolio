@@ -34,8 +34,31 @@ main{
 }
 
 .logo{
+    display: flex;
     font-size: 23px;
     font-weight: bold;
+}
+
+.logo .first-half-logo h1{
+    animation: firstDisplay 5s infinite alternate linear;
+}
+
+@keyframes firstDisplay {
+    from {color: black;}
+    to {color: rgba(0, 0, 0, 0.1);}
+}
+
+.logo .second-half-logo h1{
+    animation: secondDisplay 5s infinite alternate linear;
+}
+
+@keyframes secondDisplay {
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 nav{
