@@ -112,7 +112,8 @@ nav{
 .introduction .sub-intro h2{
     font-size: 3rem;
     padding-top: 2.5rem;
-    color:tan;
+    color:brown;
+    font-weight: bolder;
     line-height: 1.2;
 }
 
@@ -182,6 +183,7 @@ nav{
 }
 
 .about .about-info{
+    display: flex;
     align-items: center;
     margin: auto;
 }
@@ -208,10 +210,15 @@ nav{
 }
 
 .about .profile-pic{
-    width: 30%;
+    width: 350px;
     aspect-ratio: 1/1; /*ensures the height matches the width.*/
     border-radius: 50%;
     object-fit: cover;
+}
+
+.about .about-info-text{
+    text-align: justify;
+    padding: 10px;
 }
 
 /*--Experience--*/
