@@ -244,6 +244,17 @@ nav{
     padding: 10px;
 }
 
+@media (max-width: 768px) {
+    .about-info {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-pic {
+      margin-bottom: 1rem;
+    }
+  }
+  
+
 /*--Experience--*/
 .experience{
     padding-top: 50px;
