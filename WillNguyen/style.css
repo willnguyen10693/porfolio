@@ -33,6 +33,11 @@ main{
     z-index: 1000;
 }
 
+.logo{
+    font-size: 23px;
+    font-weight: bold;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -75,6 +80,7 @@ nav{
     align-items: center;
     display: flex;
 }
+
 .introduction .intro{
     color: white;
     margin: 20px;
@@ -199,6 +205,13 @@ nav{
     box-shadow: 10px 5px 5px gray;
     text-align: center;
     background-color: darkseagreen;
+}
+
+.about .profile-pic{
+    width: 30%;
+    aspect-ratio: 1/1; /*ensures the height matches the width.*/
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /*--Experience--*/
