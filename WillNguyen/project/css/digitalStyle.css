@@ -44,24 +44,6 @@ body{
     color: orchid;
 }
 
-@media (max-width: 768px) {
-    .clock{
-        font-size: 12vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .clock{
-        font-size: 15vw;
-    }
-}
-
-@media (max-width: 320px) {
-    .clock{
-        font-size: 8vw;
-    }
-}
-
 .reminder-icon{
     font-size: larger;
     color: white;
